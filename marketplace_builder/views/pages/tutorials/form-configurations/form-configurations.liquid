@@ -17,7 +17,7 @@ To follow the steps in this tutorial, you should be familiar with:
 
 ## Basic concept
 
-Form configuration are defined as liquid files and are locatated within _marektplace_builder/form_configurations_ directory.
+Form configuration is defined as liquid files and is located within _marektplace_builder/form_configurations_ directory.
 Each file is divided into the configuration and implementation section:
 
 * **configuration section** placed on top of the file marked with three dashes `---` at the start and end of the section, is a definition written in [YAML](https://en.wikipedia.org/wiki/YAML) that is telling the platform to create/update form endpoint with given name and settings. These settings determine where to store and how to validate the data. Head to [Form Configuration](/tutorials/form-configurations/form-configurations) section for full list of configuration options.
@@ -28,7 +28,7 @@ Each file is divided into the configuration and implementation section:
 
 ## Minimal form example
 
-Every form configuration is strictly connected with the resource that can be a static class predefined by PlatformOS or dynamic model. The very basic example of the FormConfiguration that enable possiblity to create object of CustomModelType named "Car" and accepts one propery called "color", would look like this:
+Every form configuration is strictly connected with the resource that can be a static class predefined by PlatformOS or dynamic model. The very basic example of the FormConfiguration that enables the possibility to create an object of CustomModelType named "Car" and accepts one property called "color", would look like this:
 
 {% raw %}
 ```liquid
@@ -47,7 +47,7 @@ configuration:
 ```
 {% endraw %}
 
-As salready mentioned the file is splited into two sections. In the configuration part you define `name` that is later used to include the form in the view, `resource` that tells the platform which CustomModelType is connected with that form and cofiguration that whitelist model properties that can be altered with this form endpoint.
+As already mentioned the file is split into two sections. In the configuration part, you define `name` that is later used to include the form in the view, `resource` that tells the platform which CustomModelType is connected with that form and configuration that whitelist model properties that can be altered with this form endpoint.
 In the implementation part  [form tag](/api-reference/liquid-tags#form) generates the HTML {% raw %}`<form>`{% endraw %} together with all, required for successful form submition, inputs and properties. Name of the text input, included in the form body, is provided by [form_builder variable](/tutorials/form-configurations/form-builder).
 
 To display the form within a page, use [include_form tag](/api-reference/liquid-tags#include_form) that accepts the name of the form which you want to display:
@@ -66,9 +66,10 @@ Now head to `/car` page and see the result form with text input followed by subm
 
 ## Next steps
 
-Congratulations! You have created your first form on PlatformOS. Now you can learn more advanced form configuration techiques in:
+Congratulations! You have created your first form on PlatformOS. Now you can learn more advanced form configuration techniques in:
 * [Form Configuration Options](/tutorials/form-configurations/configuration-options)
 
 
 {% include 'shared/questions_section' %}
+
 

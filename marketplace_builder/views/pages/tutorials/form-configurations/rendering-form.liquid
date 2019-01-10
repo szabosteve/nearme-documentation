@@ -7,7 +7,7 @@ slug: tutorials/form-configurations/rendering-form
 searchable: true
 ---
 
-In this article you will learn about all possible form configuration options.
+In this article, you will learn about all possible form configuration options.
 
 ## Requirements
 
@@ -50,7 +50,7 @@ Let's use the example form implementation from [Full Form Configuration example]
 ## Rendering form as HTML
 
 In order to generate and display form configuration HTML code use [`include_form`](/api-reference/liquid-tags#include_form) tag on any page, partial or layout.
-First argument is the name of the form configuration that you want to display, second is "key: value" list of variables that will be accessible in the form.
+The first argument is the name of the form configuration that you want to display, second is "key: value" list of variables that will be accessible in the form.
 Example:
 {% raw %}
 ```liquid
@@ -99,14 +99,14 @@ Using [`form tag`](/api-reference/liquid-tags#form) is the easiest way to genera
   ```
   {% endraw %}
 
-  Make sure to add necessary information if you create your HTMK form manually or when you use third party tools like curl to construct your request. Required request parameters are:
+  Make sure to add necessary information if you create your HTML form manually or when you use third-party tools like curl to construct your request. Required request parameters are:
   * `form_configuration_name` or `form_configuration_id` is telling PlatformOS which form to use when processing request
   * `parent_resource_id` to identify form object type
   * 'authenticity_token` is required when authorization header is not set, otherwise can be skipped
 
 ## Form Builder Object
 
-`form_builder` object is only accessible within the form configuration file because this configuration defines it's state.
+`form_builder` object is only accessible within the form configuration file because this configuration defines its state.
 
 List of `form_builder` properties:
 
@@ -114,14 +114,14 @@ List of `form_builder` properties:
 * **errors** list of validation errors raised on failed form submition. For more information about validation errors visit [Form Validation Tutorial](/tutorials/form-configurations/validation)
 * **fields** list of fields that can be altered in the form defined in [form configuration object](/tutorials/form-configurations/configuration-options#configuration).
   Every field has the following properties:
-    * name - is what you pass as name in form input field to access the property
-    * value - is value assigned to form object property, this might be different that the value stored in the database when validation is raised
+    * name - is what you pass as a name in the form input field to access the property
+    * value - is the value assigned to form object property, this might be different than the value stored in the database when validation is raised
     * validation - validation rules and errors
     * property_options - field property options
 * **name** - name of form configuration
 * **resource** - form configuration resource name
 * **resource_owner** - form configuration resource owner
-* **system_fields** - object containg data rendered within form tag
+* **system_fields** - an object containing data rendered within the form tag
 
 
 
